@@ -18,9 +18,6 @@ class PinCodeManager {
         });
         break;
       case "resend_ready":
-        // tim.forEach((call) => {
-        //   call.addEventListener("keyup", (special) => callback(tim, inputs));
-        // });
         break;
     }
   }
@@ -44,10 +41,6 @@ class PinCodeManager {
         clearInterval(time);
         return;
       }
-      // if (this.tempInterval === 0) {
-      //   break;
-      // }
-      // console.log(this.tempInterval);
       tim.innerHTML = `(${--this.tempInterval})`;
     }, 1000);
   }
@@ -59,9 +52,6 @@ pinCode.on("change", (digit, inputs, index) => {
   var cont = document.getElementsByName("form-cont")[0];
   const nextSibiling = inputs[++index];
   if (!nextSibiling) {
-    // window.alert("Pincode Submited");
-    // cont.reset();
-    // cont[0].focus();
   } else {
     nextSibiling.focus();
   }
@@ -80,15 +70,10 @@ pinCode.on("resend_ready", (countDown, time) => {
   }
 });
 
-// pinCode.render(time, () => {});
-
 function reset() {
   pinCode.startCountDown();
 }
-function Confirmation() {
-  // pinCode.on(cont.reset());
-  // window.alert("your pincode has submitted");
-}
+
 function resendPin() {
   this.countDown = 40;
   this.tempInterval = this.countDown;
@@ -105,86 +90,3 @@ function resendPin() {
     tim.innerHTML = `(${--this.tempInterval})`;
   }, 1000);
 }
-
-function goBack() {}
-
-// function confirmPincode() {
-//   window.alert("back b");
-// }
-
-// class PinCodePro {
-//   constructor() {
-//     this.pinCode = new PinCodeManager(document.querySelectorAll("input"));
-//   }
-//   inputDigit(e) {
-//     this.pinCode.on("change", (data) => console.log(data));
-//   }
-//   deleteDigit(e) {
-//     console.log("delete digit");
-//     console.log(e.target);
-//   }
-//   countdown() {
-//     if (timer === 0) {
-//       console.log("resend is ready");
-//     }
-//   }
-// }
-
-// const pinCodeManager = new PinCodeManager();
-
-// const inputs = document.querySelectorAll("input");
-// const codeBlock = document.getElementById("code-block");
-// const code = document.getElementById("code");
-// const form = document.querySelector("form");
-
-// inputs.forEach((input, key) => {
-//   if (key !== 0) {
-//     input.addEventListener("click", function () {
-//       inputs[0].focus();
-//     });
-//   }
-// input.addEventListener("keyup", function () {
-//   pinCodePro.deleteDigit();
-//   if (input.value) {
-//     if (key === 3) {
-//       // Last one tadaa
-//       const userCode = [...inputs].map((input) => input.value).join("");
-//       codeBlock.classList.remove("hidden");
-//       code.innerText = userCode;
-//     } else {
-//       inputs[key + 1].focus();
-//     }
-//   }
-// });
-// });
-
-// const inputs = document.querySelectorAll("input");
-// const codeBlock = document.getElementById("code-block");
-// const code = document.getElementById("code");
-// const form = document.querySelector("form");
-
-// inputs.forEach((input, key) => {
-//   if (key !== 0) {
-//     input.addEventListener("click", function () {
-//       inputs[0].focus();
-//     });
-//   }
-//   input.addEventListener("keyup", function () {
-//     if (input.value) {
-//       if (key === 3) {
-//         // Last one tadaa
-//         const userCode = [...inputs].map((input) => input.value).join("");
-//         codeBlock.classList.remove("hidden");
-//         code.innerText = userCode;
-//       } else {
-//         inputs[key + 1].focus();
-//       }
-//     }
-//   });
-// });
-
-// const reset = () => {
-//   form.reset();
-//   codeBlock.classList.add("hidden");
-//   code.innerText = "";
-// };

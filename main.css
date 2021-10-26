@@ -37,7 +37,6 @@ i {
 .confirmaPin {
   border: 0px;
   display: flex;
-  /* margin-top: rem; */
   margin-top: 3rem;
   margin-left: 18rem;
   min-width: 3vh;
@@ -59,7 +58,6 @@ i {
 }
 .fle {
   display: flex;
-  /* margin-top: 2rem; */
 }
 .backPage {
   display: flex;
@@ -74,9 +72,6 @@ i {
   padding-left: 10px;
   cursor: pointer;
 }
-/* .inputsCl {
-  
-} */
 
 input[type] {
   border: 2px solid rgb(151, 151, 151);
