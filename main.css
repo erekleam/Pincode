@@ -1,0 +1,87 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+input {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 3rem;
+}
+.special {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+i {
+  font-size: 1rem;
+  cursor: pointer;
+}
+&.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.confirmaPin {
+  border: 0px;
+  display: flex;
+  /* margin-top: rem; */
+  margin-top: 3rem;
+  margin-left: 18rem;
+  min-width: 3vh;
+  min-height: 2vh;
+  cursor: pointer;
+  background-color: rgb(64, 224, 208);
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 40px;
+  text-align: center;
+
+  position: absolute;
+}
+.resetClass {
+  font-weight: bolder;
+}
+.fle {
+  display: flex;
+  /* margin-top: 2rem; */
+}
+.backPage {
+  display: flex;
+  margin-top: 60px;
+  border: 0px;
+  border-radius: 50%;
+  background-color: rgb(218, 213, 213);
+  height: 30px;
+  width: 30px;
+  padding: 9px;
+  padding-top: 7px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+/* .inputsCl {
+  
+} */
+
+input[type] {
+  border: 2px solid rgb(151, 151, 151);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+
+    <title>PINCODE</title>
+</head>
+
+<div>
+    <div>
+        <div class="inputsCl">
+            <form name="form-cont" id="form">
+                <div class="passwordClass">
+                    <input type="password" maxlength=1 id='1' />
+                    <input type="password" maxlength=1 id='2' />
+                    <input type="password" maxlength=1 id='3' />
+                    <input type="password" maxlength=1 id='4' />
+                </div>
+
+            </form>
+        </div>
+        <div id="code-block timer" class="special hidden">
+            <span id="code timer"></span>
+            <br />
+
+            <i onclick="resendPin()" style="font-size: 20px; color:grey;" class="fa">&#xf021; <span
+                    id="resendPincode"></span></i>
+
+            <i onclick="reset()" class="resetClass">ხელახლა გადმოგზავნა <span id='dynamic-time'></span>
+            </i>
+            <button class="confirmaPin fle" onclick="Confirmation()"><span id="confirmPin"
+                    style="padding: 8px;">დადასტურება </span></button>
+            <button class="backPage" onclick="goBack()" style="color: grey;">
+                < <span id="goBackPage"></span>
+            </button>
+        </div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pincode-input@0.4.2/dist/pincode-input.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        var button = document.getElementById('confirmPin');
+        button.addEventListener('click', function () {
+            swal({
+                title: "Congratulations!",
+                text: "Your pincode has submitted!",
+                icon: "success",
+                button: "Okay!",
+            });
+        });
+        var gobackw = document.getElementById('goBackPage');
+        gobackw.addEventListener('click', function () {
+            swal({
+                title: "Congratulations!",
+                text: "Your pincode has submitted!",
+                icon: "success",
+                button: "Okay!",
+            });
+        });
+
+    </script>
+    </body>
+
+</html>
